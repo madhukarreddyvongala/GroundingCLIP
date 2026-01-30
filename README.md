@@ -101,6 +101,6 @@ bash run_gdino.sh
 ```bash
 bash run_gdino.sh
 ```
-> For eacg dataset make sure to change the file paths accordingly.
+> For each dataset make sure to change the file paths accordingly.
 
 ---
