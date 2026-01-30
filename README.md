@@ -83,11 +83,13 @@ python Preprocessing/get_phrase.py
 ```
 
 ## Get Bounding Boxes using Grounding DINO
+```bash
 cd GroundingDINO
 mkdir weights
 cd weights
 wget -q https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
 cd ..
+```
 
 ```bash
 bash run_gdino.sh
