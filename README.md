@@ -96,11 +96,13 @@ bash run_gdino.sh
 ```
 > The annotated images and the bounding box coordinates will be saved to `GroundingCLIP/GdinoOutput`
 
-## Image Text Matching
+## Image Text Matching & Retrieval
 
 ```bash
-bash run_gdino.sh
+bash ITM/run_gdino.sh
+bash ITR/run_gclip_retrieval.sh
 ```
+
 > For each dataset make sure to change the file paths accordingly.
 
 ---

@@ -19,3 +19,6 @@ ITM/*.csv
 ITM/__pycache__/
 ITM/comvg_Viz/
 ITM/svo_Viz/
+
+ITR/*.json
+ITR/__pycache__/

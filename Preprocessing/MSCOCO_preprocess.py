@@ -155,7 +155,7 @@ def get_top10():
 
     all_image_features, valid_files = encode_all_images(model, preprocess, device, all_image_files)
     if all_image_features is None:
-        pd.DataFrame([], columns=["image_path", "caption", "top10images"]).to_csv(RETRIEVED_CSV, index=False)
+        pd.DataFrame([], columns=["image_path", "caption", "top_10_images"]).to_csv(RETRIEVED_CSV, index=False)
         return
 
     valid_set = set(valid_files)
@@ -186,7 +186,7 @@ def get_top10():
             if len(top9) == 9:
                 break
         full_top10 = [paired_img_name] + top9
-        results.append({"image_path": f"{paired_img_name}", "caption": caption, "top10images": ";".join(full_top10)})
+        results.append({"image_path": f"{paired_img_name}", "caption": caption, "top_10_images": ";".join(full_top10)})
 
     pd.DataFrame(results).to_csv(RETRIEVED_CSV, index=False)
 
@@ -200,7 +200,7 @@ def separate():
 
 
     all_images = set(df["image_path"].tolist())
-    for img_list in df["top10images"].tolist():
+    for img_list in df["top_10_images"].tolist():
         for img in str(img_list).split(";"):
             if img:
                 all_images.add(img)
